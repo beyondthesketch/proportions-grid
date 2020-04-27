@@ -47,7 +47,6 @@ $maxWidth: ($proportionsGridMaxWidth * 0.1rem);
         $justifyValue: $proportionsGridDefaultJustify;
     }
     justify-content: $justifyValue;
-    margin: 0 auto;
     flex-basis: 100%;
 
     @include mobileAndSmaller {
@@ -66,8 +65,8 @@ $maxWidth: ($proportionsGridMaxWidth * 0.1rem);
     // }
 
     // mods
-    // Remove side paddings when container is also a full width
     &.#{$proportionsGridClassPrefix}_w_1 {
+        // Remove side paddings when container is also a full width
         padding-left: 0;
         padding-right: 0;
     }
@@ -223,6 +222,7 @@ $maxWidth: ($proportionsGridMaxWidth * 0.1rem);
             }
             @else {
                 max-width: $maxWidth;
+                margin: 0 auto;
             }
         }
     }

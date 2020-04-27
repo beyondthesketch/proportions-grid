@@ -219,6 +219,7 @@ $maxWidth: ($proportionsGridMaxWidth * 0.1rem);
         &.#{$proportionsGridClassPrefix}_w_1 {
             @if $proportionsGridUseCSSCustomProperties {
                 max-width: var(--pgrid-max-width);
+                margin: 0 auto;
             }
             @else {
                 max-width: $maxWidth;

@@ -1,0 +1,6 @@
+@use 'sass:math';
+
+@function getFixedRemValue($remValue) {
+    $pow: math.pow(10, 1);
+    @return math.round($remValue * $pow) / $pow;
+}

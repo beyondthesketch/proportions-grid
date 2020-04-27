@@ -1,0 +1,61 @@
+@import './../variables/device-widths';
+
+@mixin mobileAndSmaller {
+    @media screen and (max-width: ($smartphone - 1px)) {
+        @content;
+    }
+}
+
+@mixin smartphones {
+    @media screen and (min-width: $smartphone) {
+        @content;
+    }
+}
+@mixin onlySmartphones {
+    @media screen and (max-width: $phablet - 1px) {
+        @content;
+    }
+}
+
+@mixin phablets {
+    @media screen and (min-width: $phablet) {
+        @content;
+    }
+}
+
+@mixin tabletsPortrait {
+    @media screen and (min-width: $tabletPortrait) {
+        @content;
+    }
+}
+
+@mixin upToTablets {
+    @media screen and (max-width: ($tablet - 1px)) {
+        @content;
+    }
+}
+
+@mixin tablets {
+    @media screen and (min-width: $tablet) {
+        @content;
+    }
+}
+
+@mixin desktops {
+    @media screen and (min-width: $desktop) {
+        @content;
+    }
+}
+
+@mixin HD {
+    @media screen and (min-width: $hd) {
+        @content;
+    }
+}
+
+@mixin retina {
+    @media only screen and (min-resolution: 2dppx),
+			only screen and (-webkit-min-device-pixel-ratio: 2) {
+        @content;
+    }
+}

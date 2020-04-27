@@ -1,0 +1,16 @@
+{
+  "name": "proportions-grid",
+  "version": "1.0.0",
+  "description": "A CSS layout system with a content-first, proportion based concept",
+  "main": "dist/proportions-grid.css",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "sass --no-source-map --style=compressed src/scss/proportions-grid.scss dist/proportions-grid.css",
+    "build:dev": "sass --no-source-map src/scss/proportions-grid.scss dist/proportions-grid.css"
+  },
+  "author": "Nazeer Ruhomutally <nazeer@beyondthesketch.com> (https://www.beyondthesketch.com)",
+  "license": "MIT",
+  "devDependencies": {
+    "sass": "^1.26.5"
+  }
+}

@@ -1,0 +1,16 @@
+html {
+    font-size: 12px;
+    @if $proportionsGridUseCSSCustomProperties {
+        line-height: var(--pgrid-spacing-ratio);
+    }
+    @else {
+        line-height: $proportionsGridSpacingRatio;
+    }
+
+    @include smartphones {
+        font-size: 3.125vw;
+    }
+    @include phablets {
+        font-size: 62.5%;
+    }
+}

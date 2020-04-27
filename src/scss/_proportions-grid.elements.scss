@@ -1,0 +1,75 @@
+body {
+    @if $proportionsGridUseCSSCustomProperties {
+        font-size: var(--pgrid-base-font-size);
+    }
+    @else {
+        font-size: $baseFontSize;
+    }
+}
+
+p {
+    @if $proportionsGridUseCSSCustomProperties {
+        margin: 0 0 var(--pgrid-base-font-size);
+    }
+    @else {
+        margin: 0 0 $baseFontSize;
+    }
+    
+    &:first-child {
+        margin-top: 0;
+    }
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+
+    // TODO: If the margin top value is going to be less than the base font size - use the base font size instead
+    @if $proportionsGridUseCSSCustomProperties {
+        margin: var(--pgrid-top-margin) 0 var(--pgrid-bottom-margin);
+    }
+    @else {
+        margin: $proportionsGridMarginTop 0 $proportionsGridMarginBottom;
+    }
+    &:first-child {
+        margin-top: 0;
+    }
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+ul,
+ol {
+    @if $proportionsGridUseCSSCustomProperties {
+        margin: var(--pgrid-top-margin) 0 var(--pgrid-bottom-margin);
+    }
+    @else {
+        margin: $proportionsGridMarginTop 0 $proportionsGridMarginBottom;
+    }
+    &:first-child {
+        margin-top: 0;
+    }
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    @if $proportionsGridUseCSSCustomProperties {
+        padding: 0 0 0 var(--pgrid-top-bottom-padding); // special case that uses top/bottom for side padding
+    }
+    @else {
+        padding: 0 0 0 $topBottomPadding; // special case that uses top/bottom for side padding
+    }
+}
+
+// basic responsive image rules
+img {
+    width: 100%;
+    height: auto;
+}

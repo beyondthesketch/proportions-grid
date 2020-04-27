@@ -1,0 +1,72 @@
+// PROPORTIONS GRID USER SETTINGS
+
+// Use this file to configure the key features that will generate
+// your proportions grid file.
+//
+// Each variable set's a particular value that is used by the grid.
+// Uncomment and change the value of the variable you want to change.
+// To use the default value simple comment out again and the default
+// value for it will be used
+
+// *** SETTINGS ***
+
+// ****
+//  Grid Max Width ($proportionsGridMaxWidth):
+//  value: unitless number (integer)
+//  This determines the maximum width your layout will be constricted
+//  to when using the 'full' width class
+// ****
+//$proportionsGridMaxWidth: 1024;
+
+// ****
+//  Default Justify ($proportionsGridDefaultJustify):
+//  value: any valid value for the justify-content property
+//  The default value to use for flexbox justify-content of the
+//  Content Container class
+// ****
+// $proportionsGridDefaultJustify: flex-start;
+
+// ****
+//  Spacing Ratio ($proportionsGridSpacingRatio):
+//  value: a UNITLESS number (int/float) (≥0.5 ≤2 for best results)
+//  This is the ratio that determines all the spacings/paddings
+//  between items, text and titles in the layout
+// ****
+// $proportionsGridSpacingRatio: 1.618;
+
+// ****
+//  Base Font Size ($proportionsGridBaseFontSize):
+//  value: a UNITLESS number (int) representing the font size in px
+//  This is the ratio that determines all the spacings/paddings
+//  between items, text and titles in the layout
+// ****
+// $proportionsGridBaseFontSize: 12;
+
+// ****
+//  Class Prefix ($proportionsGridClassPrefix):
+//  value: string
+//  This is a string that is added to all Proportion Grid classes.
+//  This setting does not affect the config of the layout system
+//  only the classes you would use in your markup to apply it.
+// 
+//  TIP: If you want to squeeze every byte of file size optimisation,
+//  set this to an empty string to make the classes as small as possible
+// ****
+// $proportionsGridClassPrefix: 'pgrid';
+
+// ****
+//  Use CSS Custom Properties ($proportionsGridUseCSSCustomProperties):
+//  value: boolean
+//  Set this to true if you want your output grid file to make use of
+//  CSS custom properties for the variable values, instead of having
+//  them hard coded into the file. If true, the definitions will be at
+//  top of the output file.
+// 
+//  !!WARNING!!: This is included in for specific use cases apply to most
+//  users. We advise disabling this unless you identify a specific need.
+//  Also note that the values are not calculated, and so changing the base
+//  font size CSS variable will have no affect on the rest of the values and
+//  effectively result in a proportions grid layout that doesn't actually
+//  apply the proportions correctly
+// ****
+// $proportionsGridUseCSSCustomProperties: false;

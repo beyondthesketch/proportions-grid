@@ -79,12 +79,36 @@ Generate the proportions grid by running:
 
 The production ready css file is created in the `dist` directory as `proportions-grid.css`. Copy this file to the project in which you want to use the layout system, and link it in your html file/s, ideally before any of your other css.
 
-### Settings
+### Default Grid
 
 By default, the Portportions Grid works with the following settings:
 
 - Base font size: 12px
 - Spacing Ratio: 1.618
 - CSS class prefix: 'pgrid'
+
+3 other configurations that we like are provided for convenience:
+
+`proportions-grid-12x1_5.css` which has the following settings:
+
+- Base font size: 12px
+- Spacing Ratio: 1.5
+- CSS class prefix: 'pgrid'
+
+`proportions-grid-12x2.css` which has the following settings:
+
+- Base font size: 12px
+- Spacing Ratio: 2
+- CSS class prefix: 'pgrid'
+
+`proportions-grid-13x1_618.css` which has the following settings:
+
+- Base font size: 13px
+- Spacing Ratio: 1.618
+- CSS class prefix: 'pgrid'
+
+### Customisation
+
+You can generate grids with different settings if you want to customise the layouts further.
 
 To customize these settings, use the `_user-settings.conf.scss` file to uncomment the appropriate setting and specify your own values. When you run the npm `build` script, your settings will be used in place of the above defaults.

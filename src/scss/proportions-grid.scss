@@ -89,6 +89,7 @@ $maxWidth: ($proportionsGridMaxWidth * 0.1rem);
 
         // mods
         // Padding mod
+        // TODO: Remove this - it's a useless selector
         &.#{$proportionsGridClassPrefix}_p {
             @if $proportionsGridUseCSSCustomProperties {
                 padding: var(--pgrid-top-bottom-padding);
@@ -110,12 +111,7 @@ $maxWidth: ($proportionsGridMaxWidth * 0.1rem);
 }
 
 // Width Rules
-.#{$proportionsGridClassPrefix}_w_1,
-.#{$proportionsGridClassPrefix}_w_1_2,
-.#{$proportionsGridClassPrefix}_w_1_3,
-.#{$proportionsGridClassPrefix}_w_1_4,
-.#{$proportionsGridClassPrefix}_w_2_3,
-.#{$proportionsGridClassPrefix}_w_3_4 {
+[class*="#{$proportionsGridClassPrefix}_w"] {
     box-sizing: border-box;
     flex: 1 0 100%;
 
@@ -159,12 +155,7 @@ $maxWidth: ($proportionsGridMaxWidth * 0.1rem);
         }
     }
     &:not(.#{$proportionsGridClassPrefix}_cr) {
-        .#{$proportionsGridClassPrefix}_w_1,
-        .#{$proportionsGridClassPrefix}_w_1_4,
-        .#{$proportionsGridClassPrefix}_w_1_3,
-        .#{$proportionsGridClassPrefix}_w_1_2,
-        .#{$proportionsGridClassPrefix}_w_2_3,
-        .#{$proportionsGridClassPrefix}_w_3-4 {
+        [class*="#{$proportionsGridClassPrefix}_w"] {
             padding: 0;
         }
     }

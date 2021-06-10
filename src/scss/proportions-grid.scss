@@ -53,23 +53,10 @@ $maxWidth: ($proportionsGridMaxWidth * 0.1rem);
         padding: 0 1rem;
     }
 
-    // @include phablets {
-    &.#{$proportionsGridClassPrefix}_w_1,
-    &.#{$proportionsGridClassPrefix}_w_1_2,
-    &.#{$proportionsGridClassPrefix}_w_1_3,
-    &.#{$proportionsGridClassPrefix}_w_1_4,
-    &.#{$proportionsGridClassPrefix}_w_2_3,
-    &.#{$proportionsGridClassPrefix}_w_3_4 {
+    &[class*="#{$proportionsGridClassPrefix}_w"] {
         padding: 0;
     }
-    // }
 
-    // mods
-    &.#{$proportionsGridClassPrefix}_w_1 {
-        // Remove side paddings when container is also a full width
-        padding-left: 0;
-        padding-right: 0;
-    }
     // no wrap
     &.#{$proportionsGridClassPrefix}_n-w {
         flex-wrap: nowrap;
@@ -86,27 +73,33 @@ $maxWidth: ($proportionsGridMaxWidth * 0.1rem);
                 padding: $topBottomPadding $sidePadding;
             }
         }
+    }
 
-        // mods
-        // Padding mod
-        // TODO: Remove this - it's a useless selector
-        &.#{$proportionsGridClassPrefix}_p {
+    // mods
+    // Padding mod
+    // TODO: Remove this - it's a useless selector
+    &.#{$proportionsGridClassPrefix}_p {
+        @if $proportionsGridUseCSSCustomProperties {
+            padding: var(--pgrid-top-bottom-padding);
+        }
+        @else {
+            padding: $topBottomPadding;
+        }
+
+        @include phablets {
             @if $proportionsGridUseCSSCustomProperties {
-                padding: var(--pgrid-top-bottom-padding);
+                padding: var(--pgrid-top-bottom-padding) var(--pgrid-side-padding);
             }
             @else {
-                padding: $topBottomPadding;
-            }
-
-            @include phablets {
-                @if $proportionsGridUseCSSCustomProperties {
-                    padding: var(--pgrid-top-bottom-padding) var(--pgrid-side-padding);
-                }
-                @else {
-                    padding: $topBottomPadding $sidePadding;
-                }
+                padding: $topBottomPadding $sidePadding;
             }
         }
+    }
+}
+
+.#{$proportionsGridClassPrefix}_p {
+    [class*="#{$proportionsGridClassPrefix}_w"] {
+        padding: 0;
     }
 }
 
@@ -132,13 +125,6 @@ $maxWidth: ($proportionsGridMaxWidth * 0.1rem);
         @else {
             padding: $topBottomPadding $sidePadding;
         }
-
-        // mods
-        // no padding on the sides
-        &.#{$proportionsGridClassPrefix}_n-p-s {
-            padding-left: 0;
-            padding-right: 0;
-        }
     }
 
     // mods
@@ -146,6 +132,16 @@ $maxWidth: ($proportionsGridMaxWidth * 0.1rem);
     &.#{$proportionsGridClassPrefix}_n-p {
         padding: 0;
 
+        &-s {
+            padding-left: 0;
+            padding-right: 0;
+        }
+        &-l {
+            padding-left: 0;
+        }
+        &-r {
+            padding-right: 0;
+        }
         &-t {
             padding-top: 0;
         }

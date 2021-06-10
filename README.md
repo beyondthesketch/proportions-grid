@@ -51,8 +51,10 @@ The following CSS classes are modifiers to the default behaviours.
 - `pgrid_p` - Pad - *NOTE: Applies only to the `pgrid_w_1` width*
 - `pgrid_n-p` - No Pad - do not apply the normal padding to this width
 - `pgrid_n-p-s` - No Pad Sides - do not apply the normal padding to the sides of this width - top and bottom are padded as normal.
-- `pgrid_n-p-t` - No Pad Sides - do not apply the normal padding to the top of this width - sides and bottom are padded as normal.
-- `pgrid_n-p-b` - No Pad Sides - do not apply the normal padding to the bottom of this width - top and sides are padded as normal.
+- `pgrid_n-p-l` - No Pad Left - do not apply the normal padding to the left side of this width - right, top and bottom are padded as normal.
+- `pgrid_n-p-r` - No Pad Right - do not apply the normal padding to the right side of this width - left, top and bottom are padded as normal.
+- `pgrid_n-p-t` - No Pad Top - do not apply the normal padding to the top of this width - sides and bottom are padded as normal.
+- `pgrid_n-p-b` - No Pad Bottom - do not apply the normal padding to the bottom of this width - top and sides are padded as normal.
 - `pgrid_n-g` or `pgrid_n-f` - No Grow/No Flex - Do not allow this width to grow to fill the available space (i.e. force the width proportion specified even if it creates empty space)
 
 ### Fully Responsive

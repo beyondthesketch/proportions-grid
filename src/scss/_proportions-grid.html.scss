@@ -13,4 +13,7 @@ html {
     @include phablets {
         font-size: 62.5%;
     }
+    @include HD {
+        font-size: 0.6944444444vw;
+    }
 }

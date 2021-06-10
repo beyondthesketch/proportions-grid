@@ -1,6 +1,6 @@
 {
   "name": "proportions-grid",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "A CSS layout system with a content-first, proportion based concept",
   "main": "dist/proportions-grid.css",
   "scripts": {

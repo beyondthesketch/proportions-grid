@@ -18,7 +18,26 @@ The main concept of this layout system, is to lay out page *content* in a way th
 
 This is achieved by using a spacing ratio and a base font size to determine what amount of spacing (by approximation) is relevant between not only titles, headings, text etc, but also the structural or semantic elements you use to separate that content.
 
-The default spacing ratio used by the Proportions Grid is the golden ratio: __1.618__. We believe this is the best ratio to use as it is everywhere in nature, and therefore engages human visual perception in a way that is familiar and inherently recognised as beautiful - but you can use any ratio you like - experiment with a few to find the right one for your layout. 
+The default spacing ratio used by the Proportions Grid is the golden ratio: __1.618__. We believe this is the best ratio to use as it is everywhere in nature, and therefore engages human visual perception in a way that is familiar and inherently recognised as beautiful - but you can use any ratio you like - experiment with a few to find the right one for your layout.
+
+### REM Only Lengths
+
+When using the Proportions Grid, all CSS lengths for your project should be specified in `rem` units, including `margin`, `padding` & `font-size`.
+
+As the system works using relative proportions, and absolute lengths will make for fixed layouts that do not respond well to varying device screens. This will lead to broken or unexpected layouts.
+
+Using `rem` values is simple when working with the Proportions Grid. To get the right value, simply use the pixel value you want and divide by 10.
+
+```
+1px     = 0.1rem
+10px    = 1rem
+100px   = 10rem
+1000px  = 100rem
+
+12px    = 1.2rem
+16px    = 1.6rem
+24      = 2.4rem
+```
 
 ### Content Containers (class: pgrid_cr)
 
@@ -29,14 +48,22 @@ These are content-containing elements that are always structural and may be sema
 
 Any Content Container, or content holding item within a container can be given a width - these however are not widths in the sense you might be used to - they are *proportions*. You give your content any of the following proportions (CSS class name in brackets):
 
-- full width (pgrid_w_1)
-- Three Quarters (pgrid_w_3_4)
-- Two-thirds (pgrid_w_2_3)
-- Half (pgrid_w_1_2)
-- Third (pgrid_w_1_3)
-- Quarter (pgrid_w_1_4)
+- full width (`pgrid_w_1`)
+- Three Quarters (`pgrid_w_3_4`)
+- Two-thirds (`pgrid_w_2_3`)
+- Half (`pgrid_w_1_2`)
+- Third (`pgrid_w_1_3`)
+- Quarter (`pgrid_w_1_4`)
 
 These widths are relative to the width of their parent element and are *nest-able*.
+
+### Spacing With Padding
+
+On it's own, a Content Width only specifies the proportion of space to occupy, taking into account the content it contains and space available horizontally within it's Content Container.
+
+But one key objective of the Proportions Grid is to provide a way of designing for content by using *spacing* to create meaningful visual relationships between content. To achieve this, padding is used to give a Content Width content's the horizontal and vertical spacing from the adjacent elements.
+
+Padding can be applied either with a single class which gives the *padded width* or with *padding modifier classes*. All lthe content widths 
 
 ### CSS Modifier Classes
 

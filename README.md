@@ -36,7 +36,7 @@ Using `rem` values is simple when working with the Proportions Grid. To get the 
 
 12px    = 1.2rem
 16px    = 1.6rem
-24      = 2.4rem
+24px    = 2.4rem
 ```
 
 ### Content Containers (class: pgrid_cr)
@@ -48,12 +48,12 @@ These are content-containing elements that are always structural and may be sema
 
 Any **Content Container**, or content holding item within a container can be given a **Content Width** - these however are not widths in the sense you might be used to - they are *proportions*. You give your content any of the following proportions (CSS class name in brackets):
 
-- full width (`pgrid_w_1`)
-- Three Quarters (`pgrid_w_3_4`)
-- Two-thirds (`pgrid_w_2_3`)
-- Half (`pgrid_w_1_2`)
-- Third (`pgrid_w_1_3`)
-- Quarter (`pgrid_w_1_4`)
+- full width: `pgrid_w_1`
+- Three Quarters: `pgrid_w_3_4`
+- Two-thirds: `pgrid_w_2_3`
+- Half: `pgrid_w_1_2`
+- Third: `pgrid_w_1_3`
+- Quarter: `pgrid_w_1_4`
 
 These widths are relative to the width of their parent element and are *nest-able*.
 
@@ -72,12 +72,12 @@ Padding can be applied either with a single class which gives the *padded width*
 
 ### Padded Content Widths
 
-- full width (`pgrid_p_w_1`)
-- Three Quarters (`pgrid_p_w_3_4`)
-- Two-thirds (`pgrid_p_w_2_3`)
-- Half (`pgrid_p_w_1_2`)
-- Third (`pgrid_p_w_1_3`)
-- Quarter (`pgrid_p_w_1_4`)
+- full width: `pgrid_p_w_1`
+- Three Quarters: `pgrid_p_w_3_4`
+- Two-thirds: `pgrid_p_w_2_3`
+- Half: `pgrid_p_w_1_2`
+- Third: `pgrid_p_w_1_3`
+- Quarter: `pgrid_p_w_1_4`
 
 These alternate padded Content Width classes are great if you are trying to keep your markup's class lists small.
 
@@ -124,7 +124,7 @@ First clone this repository. Use the command line and navigate to the folder tha
 Generate the proportions grid by running:
 
 ```shell
-    npm run build
+npm run build
 ```
 
 The production ready css file is created in the `dist` directory as `proportions-grid.css`. Copy this file to the project in which you want to use the layout system, and link it in your html file/s, ideally before any of your other css.

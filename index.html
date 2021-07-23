@@ -5,9 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proportions Grid Test page</title>
     <style>
-        html {
-            font-size: 62.5%;
-        }
         .pgrid_cr:nth-child(odd) {
             background-color: rgba(0, 0, 0 ,0.05);
         }
@@ -19,7 +16,13 @@
         .pgrid_w_1_3,
         .pgrid_w_1_4,
         .pgrid_w_2_3,
-        .pgrid_w_3_4 {
+        .pgrid_w_3_4,
+        .pgrid_p_w_1,
+        .pgrid_p_w_1_2,
+        .pgrid_p_w_1_3,
+        .pgrid_p_w_1_4,
+        .pgrid_p_w_2_3,
+        .pgrid_p_w_3_4 {
             outline: 1px dotted;
         }
     </style>
@@ -30,14 +33,14 @@
         class="pgrid_cr"
     >Row - Edge</div>
     <div
-        class="pgrid_cr pgrid_w_1"
+        class="pgrid_cr pgrid_p_w_1"
     >Row  - full </div>
 
     <h1>Edge layouts</h1>
     <div
         class="pgrid_cr"
     >
-        <div class="pgrid_w_1">
+        <div class="pgrid_p_w_1">
             <h1>Full</h1>
             <h2>Heading</h2>
             <h3>Subheading</h3>
@@ -56,7 +59,7 @@
         class="pgrid_cr"
     >
         <div
-            class="pgrid_w_1_2"
+            class="pgrid_p_w_1_2"
         >
         <h1>Half</h1>
         <h2>Heading</h2>
@@ -67,7 +70,7 @@
         <p>Lorem ipsum dolor sit amet.</p>
     </div>
         <div
-            class="pgrid_w_1_2"
+            class="pgrid_p_w_1_2"
         >
         <h1>Half</h1>
         <h2>Heading</h2>
@@ -82,7 +85,7 @@
         class="pgrid_cr"
     >
         <div
-            class="pgrid_w_1_3"
+            class="pgrid_p_w_1_3"
         >
         <h1>Third</h1>
         <h2>Heading</h2>
@@ -93,7 +96,7 @@
         <p>Lorem ipsum dolor sit amet.</p>
     </div>
         <div
-            class="pgrid_w_1_3"
+            class="pgrid_p_w_1_3"
         >
             <h1>Third</h1>
         <h2>Heading</h2>
@@ -104,7 +107,7 @@
             <p>Lorem ipsum dolor sit amet.</p>
     </div>
         <div
-            class="pgrid_w_1_3"
+            class="pgrid_p_w_1_3"
         >
         <h1>Third</h1>
         <h2>Heading</h2>
@@ -119,7 +122,7 @@
         class="pgrid_cr"
     >
         <div
-            class="pgrid_w_2_3"
+            class="pgrid_p_w_2_3"
         >
         <h1>Two Thirds</h1>
         <h2>Heading</h2>
@@ -130,7 +133,7 @@
             <p>Lorem ipsum dolor sit amet.</p>
     </div>
         <div
-            class="pgrid_w_1_3"
+            class="pgrid_p_w_1_3"
         >
         <h1>Third</h1>
         <h2>Heading</h2>
@@ -145,7 +148,7 @@
         class="pgrid_cr"
     >
         <div
-            class="pgrid_w_1_2"
+            class="pgrid_p_w_1_2"
         >
         <h1>Half</h1>
         <h2>Heading</h2>
@@ -156,7 +159,7 @@
         <p>Lorem ipsum dolor sit amet.</p> 
     </div>
         <div
-            class="pgrid_w_1_4"
+            class="pgrid_p_w_1_4"
         >
         <h1>Quarter</h1>
         <h2>Heading</h2>
@@ -167,7 +170,7 @@
             <p>Lorem ipsum dolor sit amet.</p>
     </div>
         <div
-            class="pgrid_w_1_4"
+            class="pgrid_p_w_1_4"
         >
         <h1>Quarter</h1>
         <h2>Heading</h2>
@@ -182,7 +185,7 @@
         class="pgrid_cr"
     >
         <div
-            class="pgrid_w_3_4"
+            class="pgrid_p_w_3_4"
         >
         <h1>Three Quarters</h1>
         <h2>Heading</h2>
@@ -193,7 +196,7 @@
             <p>Lorem ipsum dolor sit amet.</p>
     </div>
         <div
-            class="pgrid_w_1_4"
+            class="pgrid_p_w_1_4"
         >
         <h1>Quarter</h1>
         <h2>Heading</h2>
@@ -208,7 +211,7 @@
         class="pgrid_cr"
     >
         <div
-            class="pgrid_w_1_4"
+            class="pgrid_p_w_1_4"
         >
         <h1>Quarter</h1>
         <h2>Heading</h2>
@@ -219,7 +222,7 @@
         <p>Lorem ipsum dolor sit amet.</p>
     </div>
         <div
-            class="pgrid_w_1_4"
+            class="pgrid_p_w_1_4"
         >
         <h1>Quarter</h1>
         <h2>Heading</h2>
@@ -230,7 +233,7 @@
         <p>Lorem ipsum dolor sit amet.</p>
     </div>
         <div
-            class="pgrid_w_1_4"
+            class="pgrid_p_w_1_4"
         >
         <h1>Quarter</h1>
         <h2>Heading</h2>
@@ -241,7 +244,7 @@
         <p>Lorem ipsum dolor sit amet.</p>
     </div>
         <div
-            class="pgrid_w_1_4"
+            class="pgrid_p_w_1_4"
         >
         <h1>Quarter</h1>
         <h2>Heading</h2>
@@ -255,9 +258,9 @@
 
     <h1>Full layouts</h1>
     <div
-        class="pgrid_cr pgrid_w_1"
+        class="pgrid_cr pgrid_p_w_1"
     >
-        <div class="pgrid_w_1">
+        <div class="pgrid_p_w_1">
             <h1>Full</h1>
             <h2>Heading</h2>
             <h3>Subheading</h3>
@@ -268,10 +271,10 @@
         </div>
     </div>
     <div
-        class="pgrid_cr pgrid_w_1"
+        class="pgrid_cr pgrid_p_w_1"
     >
         <div
-            class="pgrid_w_1_2"
+            class="pgrid_p_w_1_2"
         >
         <h1>Half</h1>
         <h2>Heading</h2>
@@ -282,7 +285,7 @@
         <p>Lorem ipsum dolor sit amet.</p>
     </div>
         <div
-            class="pgrid_w_1_2"
+            class="pgrid_p_w_1_2"
         >
         <h1>Half</h1>
         <h2>Heading</h2>
@@ -294,10 +297,10 @@
     </div>
     </div>
     <div
-        class="pgrid_cr pgrid_w_1"
+        class="pgrid_cr pgrid_p_w_1"
     >
         <div
-            class="pgrid_w_1_3"
+            class="pgrid_p_w_1_3"
         >
         <h1>Third</h1>
         <h2>Heading</h2>
@@ -308,7 +311,7 @@
         <p>Lorem ipsum dolor sit amet.</p>
     </div>
         <div
-            class="pgrid_w_1_3"
+            class="pgrid_p_w_1_3"
         >
         <h1>Third</h1>
         <h2>Heading</h2>
@@ -319,7 +322,7 @@
         <p>Lorem ipsum dolor sit amet.</p>
     </div>
         <div
-            class="pgrid_w_1_3"
+            class="pgrid_p_w_1_3"
         >
         <h1>Third</h1>
         <h2>Heading</h2>
@@ -331,10 +334,10 @@
     </div>
     </div>
     <div
-        class="pgrid_cr pgrid_w_1"
+        class="pgrid_cr pgrid_p_w_1"
     >
         <div
-            class="pgrid_w_2_3"
+            class="pgrid_p_w_2_3"
         >
         <h1>Two Thirds</h1>
         <h2>Heading</h2>
@@ -345,7 +348,7 @@
             <p>Lorem ipsum dolor sit amet.</p>
     </div>
         <div
-            class="pgrid_w_1_3"
+            class="pgrid_p_w_1_3"
         >
         <h1>Third</h1>
         <h2>Heading</h2>
@@ -357,10 +360,10 @@
     </div>
     </div>
     <div
-        class="pgrid_cr pgrid_w_1"
+        class="pgrid_cr pgrid_p_w_1"
     >
         <div
-            class="pgrid_w_1_2"
+            class="pgrid_p_w_1_2"
         >
         <h1>Half</h1>
         <h2>Heading</h2>
@@ -371,7 +374,7 @@
         <p>Lorem ipsum dolor sit amet.</p>
     </div>
         <div
-            class="pgrid_w_1_4"
+            class="pgrid_p_w_1_4"
         >
         <h1>Quarter</h1>
         <h2>Heading</h2>
@@ -382,7 +385,7 @@
         <p>Lorem ipsum dolor sit amet.</p>
     </div>
         <div
-            class="pgrid_w_1_4"
+            class="pgrid_p_w_1_4"
         >
         <h1>Quarter</h1>
         <h2>Heading</h2>
@@ -394,10 +397,10 @@
     </div>
     </div>
     <div
-        class="pgrid_cr pgrid_w_1"
+        class="pgrid_cr pgrid_p_w_1"
     >
         <div
-            class="pgrid_w_3_4"
+            class="pgrid_p_w_3_4"
         >
         <h1>Three Quarters</h1>
         <h2>Heading</h2>
@@ -408,7 +411,7 @@
             <p>Lorem ipsum dolor sit amet.</p>
     </div>
         <div
-            class="pgrid_w_1_4"
+            class="pgrid_p_w_1_4"
         >
         <h1>Quarter</h1>
         <h2>Heading</h2>
@@ -420,10 +423,10 @@
     </div>
     </div>
     <div
-        class="pgrid_cr pgrid_w_1"
+        class="pgrid_cr pgrid_p_w_1"
     >
         <div
-            class="pgrid_w_1_4"
+            class="pgrid_p_w_1_4"
         >
         <h1>Quarter</h1>
         <h2>Heading</h2>
@@ -434,7 +437,7 @@
         <p>Lorem ipsum dolor sit amet.</p>
     </div>
         <div
-            class="pgrid_w_1_4"
+            class="pgrid_p_w_1_4"
         >
         <h1>Quarter</h1>
         <h2>Heading</h2>
@@ -445,7 +448,7 @@
         <p>Lorem ipsum dolor sit amet.</p>
     </div>
         <div
-            class="pgrid_w_1_4"
+            class="pgrid_p_w_1_4"
         >
         <h1>Quarter</h1>
         <h2>Heading</h2>
@@ -456,7 +459,7 @@
         <p>Lorem ipsum dolor sit amet.</p>
     </div>
         <div
-            class="pgrid_w_1_4"
+            class="pgrid_p_w_1_4"
         >
         <h1>Quarter</h1>
         <h2>Heading</h2>
@@ -482,27 +485,27 @@
         class="pgrid_cr"
     >
         <div
-            class="pgrid_cr pgrid_w_1"
+            class="pgrid_cr pgrid_p_w_1"
         >
-            nested pgrid_cr pgrid_w_1
+            nested pgrid_cr pgrid_p_w_1
         </div>
     </div>
     <div
         class="pgrid_cr"
     >
         <div
-            class="pgrid_cr pgrid_w_1_2"
+            class="pgrid_cr pgrid_p_w_1_2"
         >
-            nested pgrid_cr pgrid_w_1_2
+            nested pgrid_cr pgrid_p_w_1_2
         </div>
     </div>
     <div
         class="pgrid_cr"
     >
         <div
-            class="pgrid_cr pgrid_w_1_2 no-grow"
+            class="pgrid_cr pgrid_p_w_1_2 no-grow"
         >
-            nested pgrid_cr pgrid_w_1_2 no-grow
+            nested pgrid_cr pgrid_p_w_1_2 no-grow
         </div>
     </div>
 
@@ -511,21 +514,21 @@
         class="pgrid_cr"
     >
         <div
-            class="pgrid_w_1 pgrid_cr"
+            class="pgrid_p_w_1 pgrid_cr"
         >
             <div
-                class="pgrid_w_1_2 pgrid_cr"
+                class="pgrid_p_w_1_2 pgrid_cr"
             >
                 <div
-                    class="pgrid_w_1_2"
+                    class="pgrid_p_w_1_2"
                 >
                     <div
-                        class="pgrid_w_1_2 pgrid_cr"
+                        class="pgrid_p_w_1_2 pgrid_cr"
                     >
                         <div
-                            class="pgrid_w_1_2"
+                            class="pgrid_p_w_1_2"
                         >
-                            <h1>.pgrid_w_1 > .pgrid_w_1_2 >.pgrid_w_1 > .pgrid_w_1_2</h1>
+                            <h1>.pgrid_p_w_1 > .pgrid_p_w_1_2 >.pgrid_p_w_1 > .pgrid_p_w_1_2</h1>
                             <h2>Heading</h2>
                             <h3>Subheading</h3>
                             <h4>h4</h4>
@@ -537,9 +540,9 @@
                 </div>
             </div>
             <div
-                class="pgrid_w_1_2"
+                class="pgrid_p_w_1_2"
             >
-                <h1>.pgrid_w_1 > .pgrid_w_1_2</h1>
+                <h1>.pgrid_p_w_1 > .pgrid_p_w_1_2</h1>
                 <h2>Heading</h2>
                 <h3>Subheading</h3>
                 <h4>h4</h4>
@@ -555,8 +558,8 @@
         <div
             class="pgrid_cr"
         >
-            <article class="pgrid_cr pgrid_w_1">
-                <div class="pgrid_w_1">
+            <article class="pgrid_cr pgrid_p_w_1">
+                <div class="pgrid_p_w_1">
                     <h2>Exeter</h2>
                     <p>Lorem ipsum dolor sit amet</p>
                 </div>

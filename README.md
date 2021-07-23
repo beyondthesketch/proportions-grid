@@ -44,9 +44,9 @@ Using `rem` values is simple when working with the Proportions Grid. To get the 
 These are content-containing elements that are always structural and may be semantic - such as `<div>`, `<section>`, `<article>` etc. The purpose of these elements are simply to contain actual content of your page.
 
 
-### Widths (class: pgrid_w_*)
+### Content Widths (class: pgrid_w_*)
 
-Any Content Container, or content holding item within a container can be given a width - these however are not widths in the sense you might be used to - they are *proportions*. You give your content any of the following proportions (CSS class name in brackets):
+Any **Content Container**, or content holding item within a container can be given a **Content Width** - these however are not widths in the sense you might be used to - they are *proportions*. You give your content any of the following proportions (CSS class name in brackets):
 
 - full width (`pgrid_w_1`)
 - Three Quarters (`pgrid_w_3_4`)
@@ -57,13 +57,41 @@ Any Content Container, or content holding item within a container can be given a
 
 These widths are relative to the width of their parent element and are *nest-able*.
 
-### Spacing With Padding
+By default, all **Content Width** classes specify the *minimum* proportion, but will expand to fit the width of the container. This feature allows the layout to be driven by the content it contains as well as the adjacent widths. To stop this behaviour, you can add the *no grow* modifier class, detailed below.
 
-On it's own, a Content Width only specifies the proportion of space to occupy, taking into account the content it contains and space available horizontally within it's Content Container.
+**Content Widths** will **not work** if they are not a child or decendant of a **Content Container**.
 
-But one key objective of the Proportions Grid is to provide a way of designing for content by using *spacing* to create meaningful visual relationships between content. To achieve this, padding is used to give a Content Width content's the horizontal and vertical spacing from the adjacent elements.
+### Spacing With `padding`
 
-Padding can be applied either with a single class which gives the *padded width* or with *padding modifier classes*. All lthe content widths 
+On it's own, a **Content Width** only specifies the proportion of space to occupy, taking into account the content it contains and space available horizontally within it's **Content Container**.
+
+But one key objective of the Proportions Grid is to provide a way of designing for content by using *spacing* to create meaningful visual relationships between content. To achieve this, padding is used to give a Content Width content's the horizontal and vertical spacing from the adjacent elements. The amount padding applied is derived from the spacing-ratio and the base font size.
+
+Padding can be applied either with a single class which gives the *padded width* or by using *padding modifier classes*. Each **Content Width** class is also available as a padded alternative, which are:
+
+
+### Padded Content Widths
+
+- full width (`pgrid_p_w_1`)
+- Three Quarters (`pgrid_p_w_3_4`)
+- Two-thirds (`pgrid_p_w_2_3`)
+- Half (`pgrid_p_w_1_2`)
+- Third (`pgrid_p_w_1_3`)
+- Quarter (`pgrid_p_w_1_4`)
+
+These alternate padded Content Width classes are great if you are trying to keep your markup's class lists small.
+
+### Padding Modifiers
+
+If you need to control the padding in a more granular way, the padding classes can be used alongside a width instead:
+
+- Pad all sides: `pgrid_p`
+- Pad sides: `pgrid_p-s`
+- Pad horizontals; i.e. the top and bottom edges: `pgrid_p-h`
+- Pad top: `pgrid_p-t`
+- Pad right: `pgrid_p-r`
+- Pad bottom: `pgrid_p-b`
+- Pad left: `pgrid_p-l`
 
 ### CSS Modifier Classes
 
@@ -73,22 +101,15 @@ The following CSS classes are modifiers to the default behaviours.
 
 - `pgrid_n-w` - No Wrap - prevent wrapping of the contents of this container
 
-#### Width (pgrid_w_*) modifiers
+#### Width (pgrid_w_*, pgrid_p_w_*) modifiers
 
-- `pgrid_p` - Pad - *NOTE: Applies only to the `pgrid_w_1` width*
-- `pgrid_n-p` - No Pad - do not apply the normal padding to this width
-- `pgrid_n-p-s` - No Pad Sides - do not apply the normal padding to the sides of this width - top and bottom are padded as normal.
-- `pgrid_n-p-l` - No Pad Left - do not apply the normal padding to the left side of this width - right, top and bottom are padded as normal.
-- `pgrid_n-p-r` - No Pad Right - do not apply the normal padding to the right side of this width - left, top and bottom are padded as normal.
-- `pgrid_n-p-t` - No Pad Top - do not apply the normal padding to the top of this width - sides and bottom are padded as normal.
-- `pgrid_n-p-b` - No Pad Bottom - do not apply the normal padding to the bottom of this width - top and sides are padded as normal.
-- `pgrid_n-g` or `pgrid_n-f` - No Grow/No Flex - Do not allow this width to grow to fill the available space (i.e. force the width proportion specified even if it creates empty space)
+- No Grow/No Flex: `pgrid_n-g` or `pgrid_n-f` - Do not grow and fill the available space (i.e. force the width proportion specified even if it creates empty space)
 
 ### Fully Responsive
 
-The layout system is completely responsive and flexible - being based on CSS Flexible Box Layout - without any configuration from you, handles the content in a way that mitigates your layout breaking down between breakpoints.
+The layout system is completely responsive and flexible - based on CSS Flexible Box Layout - without any configuration from you, handles the content in a way that mitigates your layout breaking down between breakpoints.
 
-In addition, the Proportions Grid uses fluid layout for smaller screensizes, meaning you can benefit from knowing you design will be predictable and consistent across a wide array of different mobile devices.
+In addition, the Proportions Grid uses fluid layout for smaller and larger screen sizes, meaning you can benefit from knowing your design will be predictable and consistent across a wide array of devices, from the smallest smartphones to the biggest 8K monitors, and everything in between.
 
 ### Gain Control by Relinquishing Control
 
@@ -112,7 +133,7 @@ The production ready css file is created in the `dist` directory as `proportions
 
 By default, the Portportions Grid works with the following settings:
 
-- Base font size: 12px
+- Base font size: 16px
 - Spacing Ratio: 1.618
 - CSS class prefix: 'pgrid'
 

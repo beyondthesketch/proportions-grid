@@ -1,3 +1,5 @@
+<p align="center"><img src="https://www.beyondthesketch.com/images/pgrid-logo.svg" width="200" height="200" style="display: block;margin: 0 auto 48px;"></p>
+
 # The Proportions Grid
 
 __An unconventional layout system for a content-first, fully responsive design approach__

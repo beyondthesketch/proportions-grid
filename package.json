@@ -6,11 +6,20 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "sass --no-source-map --style=compressed src/scss/:dist/",
-    "build:dev": "sass src/scss/:dist/"
+    "prebuild:dev": "sass src/scss/:dist/",
+    "build:dev": "postcss dist/*.css --use autoprefixer -d dist/legacy/"
   },
   "author": "Nazeer Ruhomutally <nazeer@beyondthesketch.com> (https://www.beyondthesketch.com)",
   "license": "MIT",
   "devDependencies": {
+    "autoprefixer": "^10.4.0",
+    "postcss": "^8.4.5",
+    "postcss-cli": "^9.1.0",
     "sass": "^1.26.5"
-  }
+  },
+  "browserslist": [
+    "last 2 versions",
+    "not dead",
+    "IE 10"
+  ]
 }

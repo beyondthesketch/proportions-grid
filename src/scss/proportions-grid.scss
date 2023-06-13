@@ -265,14 +265,14 @@ $maxWidth: ($proportionsGridMaxWidth * 0.1rem);
     
     .#{$proportionsGridClassPrefix}_w_1_3,
     .#{$proportionsGridClassPrefix}_p_w_1_3 {
-        $width: 100%/3;
+        $width: math.div(100%, 3);
         flex: 1 0 $width;
         @include flexGrowOverride($width);
     }
     
     .#{$proportionsGridClassPrefix}_w_2_3,
     .#{$proportionsGridClassPrefix}_p_w_2_3 {
-        $width: (100%/3) * 2;
+        $width: math.div(100%, 3) * 2;
         flex: 1 0 $width;
         @include flexGrowOverride($width);
     }

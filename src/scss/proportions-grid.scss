@@ -170,8 +170,8 @@ $maxWidth: ($proportionsGridMaxWidth * 0.1rem);
                 padding-right: var(--pgrid-side-padding);
             }
             @else {
-                padding-left: $topBottomPadding $sidePadding;
-                padding-right: $topBottomPadding $sidePadding;
+                padding-left: $sidePadding;
+                padding-right: $sidePadding;
             }
         }
         &-l {
@@ -179,7 +179,7 @@ $maxWidth: ($proportionsGridMaxWidth * 0.1rem);
                 padding-left: var(--pgrid-side-padding);
             }
             @else {
-                padding-left: $topBottomPadding $sidePadding;
+                padding-left: $sidePadding;
             }
         }
         &-r {
@@ -187,7 +187,7 @@ $maxWidth: ($proportionsGridMaxWidth * 0.1rem);
                 padding-right: var(--pgrid-side-padding);
             }
             @else {
-                padding-right: $topBottomPadding $sidePadding;
+                padding-right: $sidePadding;
             }
         }
         &-t {
@@ -229,7 +229,22 @@ $maxWidth: ($proportionsGridMaxWidth * 0.1rem);
     flex: 1 0 50%;
 }
 
-// Phablet+ rules
+@include onlySmartphones {
+    .#{$proportionsGridClassPrefix}_sm_w_1,
+    .#{$proportionsGridClassPrefix}_sm_p_w_1 {
+        flex: 1 0 100%;
+    }
+    .#{$proportionsGridClassPrefix}_sm_w_1_4,
+    .#{$proportionsGridClassPrefix}_sm_p_w_1_4 {
+        flex: 1 0 25%;
+    }
+    .#{$proportionsGridClassPrefix}_sm_w_1_2,
+    .#{$proportionsGridClassPrefix}_sm_p_w_1_2 {
+        flex: 1 0 50%;
+    }
+}
+
+// PHablet+ rules
 @include phablets {
     .#{$proportionsGridClassPrefix}_w_1_4,
     .#{$proportionsGridClassPrefix}_p_w_1_4 {
@@ -263,7 +278,7 @@ $maxWidth: ($proportionsGridMaxWidth * 0.1rem);
     }
 }
 
-// Tablet+ rules
+// TABlet+ rules
 @include tablets {
     .#{$proportionsGridClassPrefix}_cr {
         &[class*="#{$proportionsGridClassPrefix}_w"],
